@@ -1,0 +1,301 @@
+{"qid": "2024-96485", "raw": ""}
+{"qid": "2024-96359", "raw": ""}
+{"qid": "2024-224013", "raw": ""}
+{"qid": "2024-41477", "raw": ""}
+{"qid": "2024-222696", "raw": ""}
+{"qid": "2024-216598", "raw": ""}
+{"qid": "2024-141577", "raw": ""}
+{"qid": "2024-12875", "raw": ""}
+{"qid": "2024-221429", "raw": ""}
+{"qid": "2024-223829", "raw": ""}
+{"qid": "2024-44060", "raw": ""}
+{"qid": "2024-133810", "raw": ""}
+{"qid": "2024-37596", "raw": ""}
+{"qid": "2024-23862", "raw": ""}
+{"qid": "2024-35485", "raw": ""}
+{"qid": "2024-44001", "raw": ""}
+{"qid": "2024-217496", "raw": ""}
+{"qid": "2024-67021", "raw": ""}
+{"qid": "2024-32856", "raw": ""}
+{"qid": "2024-58819", "raw": ""}
+{"qid": "2024-42464", "raw": ""}
+{"qid": "2024-25032", "raw": ""}
+{"qid": "2024-7058", "raw": ""}
+{"qid": "2024-147909", "raw": ""}
+{"qid": "2024-216957", "raw": ""}
+{"qid": "2024-5675", "raw": ""}
+{"qid": "2024-129062", "raw": ""}
+{"qid": "2024-131116", "raw": ""}
+{"qid": "2024-38461", "raw": ""}
+{"qid": "2024-221022", "raw": ""}
+{"qid": "2024-219631", "raw": ""}
+{"qid": "2024-149261", "raw": ""}
+{"qid": "2024-34582", "raw": ""}
+{"qid": "2024-29941", "raw": ""}
+{"qid": "2024-206384", "raw": ""}
+{"qid": "2024-42014", "raw": ""}
+{"qid": "2024-220679", "raw": ""}
+{"qid": "2024-41796", "raw": ""}
+{"qid": "2024-33513", "raw": ""}
+{"qid": "2024-27366", "KEY_ENTITIES": {"minimalism": ["reductive design", "minimalist aesthetics", "stripped-down composition", "essentialist art", "simplicity principle"], "creativity": ["imaginative process", "creative generation", "artistic innovation", "inventive thinking", "original conception"]}, "ASSOCIATED": ["creative constraint", "purposeful omission", "aesthetic reduction", "conceptual clarity", "artistic intention", "visual simplicity", "creative discipline", "design philosophy", "form follows function", "negative space utilization"], "VERBS": ["derives from", "stems from", "originates in", "emerges through", "is driven by"]}
+{"qid": "2024-224710", "raw": ""}
+{"qid": "2024-145295", "raw": ""}
+{"qid": "2024-34595", "KEY_ENTITIES": {"poetry": ["spoken word", "poetic expression", "verse composition", "literary verse", "creative poetry"], "racism": ["racial prejudice", "systemic discrimination", "racial bias", "ethnic discrimination", "white supremacy"]}, "ASSOCIATED": ["expressive arts therapy", "racial reconciliation", "anti-racist pedagogy", "activist literature", "artistic healing", "cultural empathy", "identity formation", "marginalized voices", "systemic change", "community building"], "VERBS": ["dismantle", "address", "combat", "transform", "overcome"]}
+{"qid": "2024-129925", "raw": ""}
+{"qid": "2024-219698", "raw": ""}
+{"qid": "2024-35320", "raw": ""}
+{"qid": "2024-77099", "raw": ""}
+{"qid": "2024-215090", "raw": ""}
+{"qid": "2024-213491", "raw": ""}
+{"qid": "2024-213978", "raw": ""}
+{"qid": "2024-225456", "raw": ""}
+{"qid": "2024-152259", "raw": ""}
+{"qid": "2024-6862", "raw": ""}
+{"qid": "2024-190455", "raw": ""}
+{"qid": "2024-35269", "raw": ""}
+{"qid": "2024-76647", "raw": ""}
+{"qid": "2024-19025", "raw": ""}
+{"qid": "2024-32817", "raw": ""}
+{"qid": "2024-42645", "raw": ""}
+{"qid": "2024-223855", "raw": ""}
+{"qid": "2024-36741", "raw": ""}
+{"qid": "2024-127266", "raw": ""}
+{"qid": "2024-215256", "raw": ""}
+{"qid": "2024-214483", "raw": ""}
+{"qid": "2024-43983", "raw": ""}
+{"qid": "2024-36355", "raw": ""}
+{"qid": "2024-214744", "raw": ""}
+{"qid": "2024-43684", "raw": ""}
+{"qid": "2024-25003", "raw": ""}
+{"qid": "2024-66937", "raw": ""}
+{"qid": "2024-41918", "raw": ""}
+{"qid": "2024-158677", "raw": ""}
+{"qid": "2024-79129", "raw": ""}
+{"qid": "2024-153051", "raw": ""}
+{"qid": "2024-19947", "raw": ""}
+{"qid": "2024-41711", "raw": ""}
+{"qid": "2024-224063", "raw": ""}
+{"qid": "2024-37566", "KEY_ENTITIES": {"female sex offenders": ["women who sexually offend", "female perpetrators", "female sexual abusers", "women convicted of sexual offenses", "female sex criminals"], "risk manifestation": ["dynamic risk factors", "risk assessment markers", "behavioral warning signs", "criminogenic needs", "recidivism predictors"], "gender-specific presentation": ["gender-specific patterns", "female-typical behavior", "sex differences in offending", "gendered risk presentation", "women's pathways to offending"]}, "ASSOCIATED": ["gender-responsive risk assessment", "female sex offender typologies", "sexual offense pathways", "gender-specific risk factors", "female perpetrator profiles", "risk formulation", "dynamic risk management", "sexual violence risk", "gendered criminogenic needs", "female offender assessment"], "VERBS": ["manifest", "exhibit", "demonstrate", "present", "indicate"]}
+{"qid": "2024-41198", "KEY_ENTITIES": {"edi": ["X12 healthcare transactions", "HL7 clinical documents", "standardized health messaging", "healthcare data exchange", "electronic data interchange"], "nursing": ["clinical nursing workflows", "nursing staff operations", "direct patient care", "patient care delivery", "nursing practice"]}, "ASSOCIATED": ["nurse time allocation", "clinical documentation accuracy", "administrative burden reduction", "workflow efficiency improvements", "care coordination enhancement", "revenue cycle optimization", "clinical decision support", "patient safety outcomes", "regulatory compliance standards", "healthcare interoperability mandates"], "VERBS": ["streamline", "transform", "alter", "affect", "enhance"]}
+{"qid": "2024-223345", "raw": ""}
+{"qid": "2024-127288", "raw": ""}
+{"qid": "2024-21669", "KEY_ENTITIES": ["abortion procedures", "termination of pregnancy", "induced abortion", "pregnancy termination", "abortion care", "Black women", "African American women", "Black maternal health", "African American population", "Black demographic", "firearm injuries", "gun violence", "homicide weapons", "assault weapons", "lethal weapons", "maternal mortality", "death rates", "fatality statistics", "mortality data", "complication deaths"], "ASSOCIATED_TERMS": ["racial health disparities", "maternal mortality review", "CDC pregnancy mortality", "comparative fatality rates", "public health surveillance", "weapon injury statistics", "abortion complication rates", "disproportionate death rates", "health equity data", "demographic risk analysis"], "VERBS": ["cause", "result in", "contribute to", "account for", "surpass"]}
+{"qid": "2024-137315", "raw": ""}
+{"qid": "2024-41465", "raw": ""}
+{"qid": "2024-135747", "raw": ""}
+{"qid": "2024-213855", "raw": ""}
+{"qid": "2024-76908", "KEY_ENTITIES": {"rent_seeking_tactics": ["rent-seeking behavior", "regulatory capture", "privilege extraction", "lobbying for monopolies", "state-granted advantages"], "forced_exchanges": ["coerced transactions", "compulsory transfers", "mandatory trade", "involuntary exchanges", "state-directed allocations"], "blocked_exchanges": ["trade restrictions", "market access barriers", "transaction prohibitions", "commercial impediments", "exchange blockades"]}, "ASSOCIATED": ["regulatory capture mechanisms", "market distortion effects", "transaction cost inflation", "allocative inefficiency", "policy-induced scarcity", "crony capitalism dynamics", "state interventionism", "barriers to market entry", "deadweight loss generation", "institutional friction"], "VERBS": ["distort", "impede", "suppress", "constrain", "undermine"]}
+{"qid": "2024-223382", "raw": ""}
+{"qid": "2024-44065", "KEY_ENTITIES": {"celebrities": ["Hollywood actors", "entertainment industry stars", "media personalities", "celebrity activists", "public figures"], "diversity and inclusion": ["inclusive casting", "representation in media", "underrepresented groups", "cultural diversity", "diversity initiatives"]}, "ASSOCIATED": ["equitable media representation", "marginalized voices", "social justice campaigns", "industry reform efforts", "diversity statements", "inclusive hiring practices", "media diversity reports", "cultural representation", "public awareness initiatives", "equity in entertainment"], "VERBS": ["spearheaded campaigns", "championed causes", "campaigned for", "pushed for", "raised awareness about"]}
+{"qid": "2024-214052", "raw": ""}
+{"qid": "2024-142395", "raw": ""}
+{"qid": "2024-224226", "raw": ""}
+{"qid": "2024-96063", "raw": ""}
+{"qid": "2024-161461", "raw": ""}
+{"qid": "2024-114095", "raw": ""}
+{"qid": "2024-90454", "raw": ""}
+{"qid": "2024-40863", "KEY_ENTITIES": {"bee sting": ["Hymenoptera envenomation", "Hymenoptera sting", "bee venom reaction", "insect venom exposure", "insect sting reaction"], "quality of life": ["health-related quality of life", "functional status", "daily functioning", "patient well-being", "psychological well-being"]}, "ASSOCIATED": ["venom immunotherapy", "epinephrine auto-injector", "anaphylactic reaction", "venom allergy", "work productivity loss", "sleep disturbance", "allergic sensitization", "entomophobia", "emergency department visit", "chronic pain management"], "VERBS": ["impair", "compromise", "diminish", "exacerbate", "reduce"]}
+{"qid": "2024-35227", "raw": ""}
+{"qid": "2024-35834", "KEY_ENTITIES": {"individualization": ["sociological individualization", "social atomization", "individualistic values", "personal autonomy", "decline of community ties"], "homicide rate": ["murder rate", "lethal violence", "homicide incidence", "violent crime statistics", "fatal assault rates"]}, "ASSOCIATED": ["social disorganization theory", "breakdown of social control", "weakened social bonds", "anomie and violence", "societal fragmentation", "modernization and crime", "lack of social integration", "peer group dynamics", "informal social control", "criminological perspectives"], "VERBS": ["correlate with", "influence", "impact", "drive", "shape"]}
+{"qid": "2024-141993", "KEY_ENTITIES": {"biological_impact": ["physiological consequences", "somatic manifestations", "autonomic dysregulation", "HPA axis activation", "inflammatory markers"], "suppressed_grief": ["unexpressed grief", "emotional suppression", "inhibited mourning", "unresolved bereavement", "repressed sorrow"]}, "ASSOCIATED": ["HPA axis hyperactivity", "autonomic nervous system imbalance", "chronic inflammation markers", "psychosomatic symptomatology", "allostatic load accumulation", "heart rate variability reduction", "sleep architecture disruption", "gastrointestinal motility changes", "cardiovascular strain indicators", "immune system suppression"], "VERBS": ["triggers", "induces", "exacerbates", "dysregulates", "precipitates"]}
+{"qid": "2024-217488", "raw": ""}
+{"qid": "2024-142084", "raw": ""}
+{"qid": "2024-35284", "raw": ""}
+{"qid": "2024-43037", "raw": ""}
+{"qid": "2024-141280", "raw": ""}
+{"qid": "2024-220140", "raw": ""}
+{"qid": "2024-6587", "raw": ""}
+{"qid": "2024-37470", "raw": ""}
+{"qid": "2024-105741", "raw": ""}
+{"qid": "2024-29936", "raw": ""}
+{"qid": "2024-19448", "KEY_ENTITIES": {"affordable care act": ["Obamacare", "ACA", "health reform law", "federal healthcare legislation", "Obamacare mandates"], "first amendment": ["free exercise clause", "establishment clause", "religious liberty", "free speech rights", "Bill of Rights"]}, "ASSOCIATED": ["contraception mandate", "Hobby Lobby ruling", "religious exemptions", "employer mandate", "conscience clause", "religious non-profits", "constitutional challenge", "individual mandate", "Supreme Court decision", "federal court ruling"], "VERBS": ["infringe", "contravene", "breach", "impinge", "conflict"]}
+{"qid": "2024-41610", "raw": ""}
+{"qid": "2024-38986", "raw": ""}
+{"qid": "2024-34521", "raw": ""}
+{"qid": "2024-36338", "raw": ""}
+{"qid": "2024-213469", "raw": ""}
+{"qid": "2024-225247", "raw": ""}
+{"qid": "2024-36857", "raw": ""}
+{"qid": "2024-126414", "KEY_ENTITIES": {"individual financial capacity": ["household disposable income", "consumer debt burden", "personal financial resilience", "low income households", "economic hardship indicators"], "utility costs": ["residential utility bills", "essential service charges", "energy and water costs", "household utility expenses", "public utility rates"]}, "ASSOCIATED": ["energy poverty indicators", "utility assistance eligibility", "household budget allocation", "cost of living pressures", "means tested benefits", "utility shutoff prevention", "regional price variations", "inflation impact on bills", "financial hardship programs", "payment plan availability"], "VERBS": ["determines", "influences", "impacts", "constrains", "dictates"]}
+{"qid": "2024-38379", "raw": ""}
+{"qid": "2024-45185", "raw": ""}
+{"qid": "2024-160888", "raw": ""}
+{"qid": "2024-219661", "raw": ""}
+{"qid": "2024-42556", "raw": ""}
+{"qid": "2024-41334", "raw": ""}
+{"qid": "2024-218590", "raw": ""}
+{"qid": "2024-224926", "raw": ""}
+{"qid": "2024-34710", "raw": ""}
+{"qid": "2024-214126", "raw": ""}
+{"qid": "2024-221364", "raw": ""}
+{"qid": "2024-36672", "raw": ""}
+{"qid": "2024-217812", "raw": ""}
+{"qid": "2024-3653", "raw": ""}
+{"qid": "2024-29222", "raw": ""}
+{"qid": "2024-7532", "raw": ""}
+{"qid": "2024-224279", "KEY_ENTITIES": {"teachers": ["educators", "instructors", "faculty members", "classroom practitioners", "teaching professionals"], "instruction": ["pedagogy", "teaching methods", "curriculum delivery", "lesson design", "instructional practices"]}, "ASSOCIATED": ["reflective practice", "instructional coaching", "formative assessment", "data-driven instruction", "pedagogical effectiveness", "student learning outcomes", "continuous improvement", "classroom observation", "professional learning communities", "evidence-based teaching"], "VERBS": ["evaluating", "assessing", "reflecting", "analyzing", "monitoring"]}
+{"qid": "2024-220794", "raw": ""}
+{"qid": "2024-223914", "raw": ""}
+{"qid": "2024-35506", "KEY_ENTITIES": {"Constantine": ["Constantine I", "Constantine the Great", "Flavius Valerius Constantinus", "Roman emperor Constantine", "Constantinian era"], "Decline of Rome": ["fall of Rome", "decline of ancient Rome", "Roman urban decay", "late Roman Empire", "collapse of Rome"]}, "ASSOCIATED": ["relocation of imperial capital", "founding of Constantinople", "imperial court migration", "administrative decentralization", "military reorganization", "economic shift eastward", "tax system reforms", "Christianization policy", "western provincial neglect", "late antique transformation"], "VERBS": ["accelerate", "precipitate", "exacerbate", "contribute to", "hasten"]}
+{"qid": "2024-213817", "raw": ""}
+{"qid": "2024-219626", "raw": ""}
+{"qid": "2024-77150", "raw": ""}
+{"qid": "2024-6778", "raw": ""}
+{"qid": "2024-136156", "KEY_ENTITIES": {"stress": ["chronic psychological stress", "acute stress exposure", "cortisol secretion", "hypothalamic-pituitary-adrenal axis", "allostatic load"], "memory": ["episodic memory recall", "working memory capacity", "long-term memory consolidation", "hippocampal-dependent learning", "cognitive retention"]}, "ASSOCIATED": ["cortisol-mediated hippocampal atrophy", "stress-induced memory impairment", "memory consolidation disruption", "Yerkes-Dodson performance curve", "neuroendocrine arousal effects", "cognitive load under pressure", "synaptic plasticity modulation", "attentional narrowing during stress", "psychological resilience factors", "experimental stress paradigms"], "VERBS": ["modulate", "correlate", "mediate", "demonstrate", "indicate"]}
+{"qid": "2024-42195", "KEY_ENTITIES": {"specialization": ["task specialization", "occupational specialization", "division of labor", "focused production", "niche manufacturing"], "producers": ["manufacturing firms", "industrial companies", "agricultural suppliers", "commercial enterprises", "production units"]}, "ASSOCIATED": ["lower unit costs", "reduced training expenses", "faster production cycles", "higher output quality", "improved labor efficiency", "streamlined manufacturing processes", "increased productivity rates", "economies of scale", "comparative advantage", "enhanced market competitiveness"], "VERBS": ["benefit", "improve", "increase", "boost", "enhance"]}
+{"qid": "2024-134964", "raw": ""}
+{"qid": "2024-41464", "raw": ""}
+{"qid": "2024-44048", "raw": ""}
+{"qid": "2024-145979", "raw": ""}
+{"qid": "2024-128784", "raw": ""}
+{"qid": "2024-137182", "raw": ""}
+{"qid": "2024-134629", "KEY_ENTITIES": {"auditors": ["financial auditors", "internal auditors", "audit professionals", "assurance specialists", "compliance auditors"], "professional growth": ["fast track promotion", "director level positions", "senior management roles", "partner track", "career advancement"]}, "ASSOCIATED": ["Chief Financial Officer", "Audit Director", "Financial Controller", "Risk Management Director", "Management Consultant", "Forensic Accounting Specialist", "Compliance Officer", "Internal Audit Manager", "Senior Partner", "Vice President Finance"], "VERBS": ["transition", "advance", "promote", "progress", "ascend"]}
+{"qid": "2024-214467", "raw": ""}
+{"qid": "2024-73918", "raw": ""}
+{"qid": "2024-37173", "raw": ""}
+{"qid": "2024-213901", "KEY_ENTITIES": {"Designers": ["UX designers", "graphic designers", "creative professionals", "visual artists", "design practitioners"], "Professional Insecurity": ["creative imposter syndrome", "career self-doubt", "occupational anxiety", "professional uncertainty", "workplace confidence issues"], "Design Profession": ["design career path", "creative industry", "visual design field", "artistic occupation", "creative workforce"]}, "ASSOCIATED": ["AI disruption in design", "subjective client feedback", "portfolio evaluation pressure", "rapid tool obsolescence", "design value perception", "constant skill upskilling", "freelance income instability", "creative industry competition", "creative burnout rates", "workplace validation seeking"], "VERBS": ["question their worth", "doubt their abilities", "struggle with confidence", "fear career obsolescence", "lack professional validation"]}
+{"qid": "2024-45474", "raw": ""}
+{"qid": "2024-32912", "KEY_ENTITIES": {"Vietnam War": ["Vietnam conflict", "Indochina War", "American War", "Vietnam military operations", "Southeast Asia war"], "economy": ["US economy", "federal budget", "inflation rates", "GDP growth", "national debt"], "1968": ["fiscal year 1968", "calendar year 1968", "1968 economic data", "late 1960s", "1968 national accounts"]}, "ASSOCIATED": ["guns versus butter", "war financing", "fiscal deficit", "military spending", "balance of payments", "price controls", "defense budget", "tax increases", "inflationary pressure", "economic recession"], "VERBS": ["impact", "strain", "disrupt", "undermine", "destabilize"]}
+{"qid": "2024-37531", "KEY_ENTITIES": {"educational administrators": ["school principals", "district superintendents", "school board members", "education officials", "academic leaders"], "children": ["K-12 students", "elementary pupils", "adolescents", "school children", "minor students"]}, "ASSOCIATED": ["behavioral conditioning", "coercive practices", "disciplinary tactics", "institutional compliance", "psychological control", "authority dynamics", "student compliance", "power imbalance", "institutional pressure", "behavioral modification"], "VERBS": ["coerce", "control", "condition", "compel", "regulate"]}
+{"qid": "2024-134815", "raw": ""}
+{"qid": "2024-127653", "raw": ""}
+{"qid": "2024-224621", "raw": ""}
+{"qid": "2024-224399", "KEY_ENTITIES": {"tyrants": ["totalitarian dictators", "despotic monarchs", "autocratic leaders", "authoritarian rulers", "dictatorial figures"], "well-liked": ["mass popularity", "public approval", "widespread support", "popular acclaim", "broad endorsement"]}, "ASSOCIATED": ["cult of personality", "patronage networks", "manufactured consent", "charismatic leadership", "state propaganda", "economic stabilization", "military triumphs", "public infrastructure", "elite alliances", "nationalist rhetoric"], "VERBS": ["commanded", "cultivated", "secured", "inspired", "garnered"]}
+{"qid": "2024-160253", "raw": ""}
+{"qid": "2024-44024", "raw": ""}
+{"qid": "2024-40831", "raw": ""}
+{"qid": "2024-128311", "raw": "{\n  \"KEY_ENTITIES\": {\n    \"assessment\": [\n      \"standardized measure\",\n      \"functional assessment\",\n      \"clinical"}
+{"qid": "2024-44005", "raw": ""}
+{"qid": "2024-113215", "raw": ""}
+{"qid": "2024-221836", "raw": ""}
+{"qid": "2024-69711", "KEY_ENTITIES": {"Chinese government": ["Beijing authorities", "CCP leadership", "State Council", "Chinese state apparatus", "PRC administration"], "citizens": ["Chinese population", "mainland residents", "domestic populace", "Chinese public", "urban and rural residents"], "Social division": ["ethnic tensions", "regional divides", "ideological splits", "class stratification", "cultural divisions"]}, "ASSOCIATED": ["social credit system", "Great Firewall", "propaganda apparatus", "surveillance networks", "information control", "dissent suppression", "media regulation", "ideological education", "public opinion management", "digital censorship"], "VERBS": ["fragment", "polarize", "suppress", "monitor", "censor"]}
+{"qid": "2024-79154", "raw": ""}
+{"qid": "2024-221278", "raw": ""}
+{"qid": "2024-142330", "raw": ""}
+{"qid": "2024-36302", "KEY_ENTITIES": {"old ria\u00f1o residents": ["Ria\u00f1o villagers", "displaced families", "local inhabitants", "affected population", "Ria\u00f1o community"], "protest": ["anti-dam rallies", "civil resistance", "public demonstrations", "community mobilization", "peaceful opposition"], "relocation": ["reservoir flooding", "forced displacement", "village evacuation", "population transfer", "land expropriation"]}, "ASSOCIATED": ["Embalse de Ria\u00f1o", "anti-dam movement", "hydroelectric dam", "forced migration", "social conflict", "Le\u00f3n province", "Franco regime", "environmental activism", "cultural heritage", "river flooding"], "VERBS": ["resisted", "opposed", "demonstrated", "mobilized", "challenged"]}
+{"qid": "2024-219563", "raw": ""}
+{"qid": "2024-224207", "KEY_ENTITIES": {"businesses": ["companies", "brands", "firms", "enterprises", "retailers"], "students": ["college students", "university students", "Gen Z youth", "campus demographic", "young adults"], "customers": ["consumers", "buyers", "clients", "patrons", "target audience"]}, "ASSOCIATED": ["student purchasing behavior", "campus brand activation", "Gen Z consumer trends", "early brand loyalty", "future market potential", "youth demographic targeting", "student discount programs", "peer-to-peer marketing", "lifetime value projection", "academic market segmentation"], "VERBS": ["reach", "engage", "attract", "capture", "court"]}
+{"qid": "2024-88894", "raw": ""}
+{"qid": "2024-42738", "raw": ""}
+{"qid": "2024-41563", "raw": ""}
+{"qid": "2024-219824", "raw": ""}
+{"qid": "2024-219271", "raw": ""}
+{"qid": "2024-22919", "raw": ""}
+{"qid": "2024-111331", "raw": ""}
+{"qid": "2024-22172", "raw": ""}
+{"qid": "2024-35596", "raw": ""}
+{"qid": "2024-36131", "raw": ""}
+{"qid": "2024-40996", "raw": ""}
+{"qid": "2024-44059", "raw": ""}
+{"qid": "2024-137667", "raw": ""}
+{"qid": "2024-173795", "raw": ""}
+{"qid": "2024-222465", "raw": ""}
+{"qid": "2024-225531", "raw": ""}
+{"qid": "2024-215044", "raw": ""}
+{"qid": "2024-113646", "raw": ""}
+{"qid": "2024-17909", "raw": ""}
+{"qid": "2024-214096", "KEY_ENTITIES": {"marijuana users": ["cannabis consumers", "THC users", "pot smokers", "weed consumers", "marijuana consumers"], "sluggish people": ["psychomotor slowing", "cognitive impairment", "reduced alertness", "sedentary state", "lethargic effects"], "munchies": ["cannabis-induced hunger", "increased appetite", "food cravings", "appetite stimulation", "hyperphagia"], "stereotypical portrayal": ["media tropes", "popular culture depictions", "societal perceptions", "cannabis myths", "recreational drug stereotypes"]}, "ASSOCIATED": ["endocannabinoid system", "CB1 receptor activation", "ghrelin hormone levels", "dopamine reward pathway", "cannabis media representation", "psychoactive compound effects", "historical drug stigma", "recreational cannabis culture", "neurotransmitter modulation", "pop culture tropes"], "VERBS": ["depicted", "characterized", "represented", "perceived", "framed"]}
+{"qid": "2024-19562", "raw": ""}
+{"qid": "2024-33466", "raw": ""}
+{"qid": "2024-42781", "raw": ""}
+{"qid": "2024-42376", "KEY_ENTITIES": {"Civil War": ["American Civil War", "War Between the States", "Confederate rebellion", "Union military campaign", "Southern secession conflict"], "War for freedom": ["Emancipation Proclamation", "abolition of slavery", "end of chattel slavery", "fight for liberty", "moral crusade"]}, "ASSOCIATED": ["Lincoln's policy shift", "battlefield emancipation", "contraband camps", "shifting war objectives", "Union war aims", "freedom as war aim", "preserving the Union", "abolitionist movement", "total war strategy", "moral transformation"], "VERBS": ["transform", "shift", "redefine", "evolve", "transition"]}
+{"qid": "2024-32502", "KEY_ENTITIES": {"democratic values": ["procedural justice", "civil liberties", "rule of law", "constitutional principles", "human rights standards"], "police": ["community policing units", "sworn officers", "police departments", "policing practices", "law enforcement agencies"]}, "ASSOCIATED": ["civilian oversight boards", "use of force policies", "de-escalation training", "transparency reporting", "accountability mechanisms", "community engagement strategies", "civil rights compliance", "public trust metrics", "ethical policing standards", "democratic policing models"], "VERBS": ["operationalized", "institutionalized", "upheld", "embodied", "reflected"]}
+{"qid": "2024-224960", "raw": ""}
+{"qid": "2024-219896", "raw": ""}
+{"qid": "2024-214257", "KEY_ENTITIES": {"Starbucks": ["Starbucks Corporation", "SBUX", "Seattle coffee chain", "coffeehouse brand", "global coffee retailer"], "boycott": ["consumer boycott", "boycott campaign", "customer protest", "divestment call", "boycott movement"]}, "ASSOCIATED": ["unionization push", "Israel Palestine stance", "barista strikes", "labor relations", "corporate governance", "ESG controversies", "supply chain ethics", "shareholder activism", "consumer backlash", "social media campaign"], "VERBS": ["protesting", "avoiding", "divesting", "shunning", "criticizing"]}
+{"qid": "2024-32534", "raw": ""}
+{"qid": "2024-219624", "raw": ""}
+{"qid": "2024-215952", "raw": ""}
+{"qid": "2024-42163", "KEY_ENTITIES": {"society": ["social environments", "cultural systems", "human communities", "social groups", "group dynamics"], "societal roles": ["division of labor", "status hierarchies", "gender roles", "social roles", "behavioral niches"], "evolutionary psychology": ["human behavioral ecology", "evolutionary anthropology", "psychological adaptation", "adaptive psychology", "evolutionary theory"]}, "ASSOCIATED": ["ancestral environments", "parental investment theory", "kin selection mechanisms", "reciprocal altruism models", "sexual selection pressures", "social hierarchy formation", "cooperative breeding systems", "cultural group selection", "evolutionary game theory", "adaptive social behavior"], "VERBS": ["assign", "shape", "determine", "construct", "mediate"]}
+{"qid": "2024-217582", "raw": ""}
+{"qid": "2024-152817", "raw": ""}
+{"qid": "2024-32796", "raw": ""}
+{"qid": "2024-126056", "raw": ""}
+{"qid": "2024-44754", "raw": ""}
+{"qid": "2024-5957", "raw": ""}
+{"qid": "2024-34927", "KEY_ENTITIES": {"municipal social media": ["local government platforms", "civic digital outreach", "public sector social networks", "municipal digital channels", "city online communication"], "digital disparity": ["digital divide", "service access gaps", "demographic inequities", "socioeconomic inequality", "urban digital exclusion"]}, "ASSOCIATED": ["digital redlining", "targeted civic messaging", "algorithmic bias", "information asymmetry", "civic engagement gaps", "platform accessibility", "digital literacy rates", "marginalized communities", "notification fatigue", "digital inclusion policies"], "VERBS": ["exacerbate", "amplify", "perpetuate", "widen", "reinforce"]}
+{"qid": "2024-22900", "raw": ""}
+{"qid": "2024-111506", "raw": ""}
+{"qid": "2024-158743", "raw": ""}
+{"qid": "2024-40724", "raw": ""}
+{"qid": "2024-79081", "raw": ""}
+{"qid": "2024-35620", "raw": ""}
+{"qid": "2024-5992", "raw": ""}
+{"qid": "2024-36186", "raw": ""}
+{"qid": "2024-220307", "raw": ""}
+{"qid": "2024-23680", "raw": ""}
+{"qid": "2024-29182", "raw": ""}
+{"qid": "2024-153070", "raw": ""}
+{"qid": "2024-225389", "raw": ""}
+{"qid": "2024-220058", "KEY_ENTITIES": {"premature birth": ["preterm infants", "low gestational age", "premature delivery", "preterm neonates", "early birth"], "child abuse": ["nonaccidental trauma", "infant maltreatment", "caregiver neglect", "physical abuse", "child maltreatment"]}, "ASSOCIATED": ["prolonged crying", "feeding difficulties", "sleep disruption", "NICU admission", "medical complexity", "developmental delay", "caregiver burden", "parental stress", "postpartum depression", "socioeconomic disadvantage"], "VERBS": ["increases", "predisposes", "contributes", "correlates", "predicts"]}
+{"qid": "2024-40868", "raw": ""}
+{"qid": "2024-126326", "KEY_ENTITIES": {"college_students": ["university attendees", "campus residents", "higher education learners", "undergraduate population", "tertiary students"], "self_protection": ["personal safety measures", "risk mitigation strategies", "campus security protocols", "hazard prevention steps", "self-defense practices"]}, "ASSOCIATED": ["Title IX reporting", "dormitory security protocols", "bystander intervention training", "emergency alert systems", "safe ride programs", "campus crime statistics", "identity theft prevention", "crisis intervention hotlines", "mental health first aid", "campus safety guidelines"], "VERBS": ["implement", "adopt", "practice", "utilize", "follow"]}
+{"qid": "2024-225223", "raw": ""}
+{"qid": "2024-141453", "KEY_ENTITIES": {"evidence": ["trial exhibits", "forensic items", "documentary records", "case materials", "physical proof"], "lost evidence": ["destroyed evidence", "missing evidence", "unavailable exhibits", "compromised proof", "unrecovered materials"]}, "ASSOCIATED": ["spoliation of evidence", "chain of custody breach", "Brady violation", "dismissal with prejudice", "evidentiary hearing", "prejudice to defendant", "continuation of trial", "sanctions for loss", "burden of proof", "due process violation"], "VERBS": ["dismiss", "suppress", "sanction", "continue", "adjourn"]}
+{"qid": "2024-19454", "KEY_ENTITIES": {"American Dream": ["rags to riches", "self-made man", "land of opportunity", "upward mobility", "economic advancement"], "early 1900s": ["progressive era", "turn of the century", "early twentieth century", "1900 to 1920", "1900s decade"]}, "ASSOCIATED": ["immigrant experience", "industrial capitalism", "social stratification", "class mobility", "national mythology", "economic opportunity", "historical origins", "conceptual evolution", "turn of the century society", "ideological framework"], "VERBS": ["take shape", "emerge", "originate", "develop", "manifest"]}
+{"qid": "2024-5809", "raw": ""}
+{"qid": "2024-225026", "raw": ""}
+{"qid": "2024-109837", "raw": ""}
+{"qid": "2024-3824", "raw": ""}
+{"qid": "2024-42497", "raw": ""}
+{"qid": "2024-223499", "raw": ""}
+{"qid": "2024-222481", "raw": ""}
+{"qid": "2024-143869", "raw": ""}
+{"qid": "2024-41960", "raw": ""}
+{"qid": "2024-41077", "raw": ""}
+{"qid": "2024-22410", "raw": ""}
+{"qid": "2024-224339", "raw": ""}
+{"qid": "2024-142125", "raw": ""}
+{"qid": "2024-225150", "raw": ""}
+{"qid": "2024-215833", "raw": ""}
+{"qid": "2024-138052", "raw": ""}
+{"qid": "2024-221442", "raw": ""}
+{"qid": "2024-217241", "raw": ""}
+{"qid": "2024-38611", "raw": ""}
+{"qid": "2024-41849", "raw": ""}
+{"qid": "2024-17605", "raw": ""}
+{"qid": "2024-73921", "KEY_ENTITIES": {"TIME_CONSTRAINTS": ["no time to cook", "lack of time", "time constraints", "busy schedule", "time poverty"], "POOR_DIET": ["poor diet", "unhealthy eating", "bad nutrition", "dietary habits", "food choices"]}, "ASSOCIATED": ["barriers to healthy eating", "excuses for poor nutrition", "meal preparation barriers", "fast food reliance", "convenience food consumption", "dietary decision making", "work schedule eating", "time and diet relationship", "eating habit surveys", "nutrition research findings"], "VERBS": ["attribute", "cite", "justify", "excuse", "link"]}
+{"qid": "2024-43905", "raw": ""}
+{"qid": "2024-45494", "raw": ""}
+{"qid": "2024-215094", "raw": ""}
+{"qid": "2024-217279", "raw": ""}
+{"qid": "2024-43972", "raw": ""}
+{"qid": "2024-127349", "raw": ""}
+{"qid": "2024-214630", "raw": ""}
+{"qid": "2024-213789", "raw": ""}
+{"qid": "2024-219385", "KEY_ENTITIES": {"Vatican City": ["Vatican City State", "Holy See", "Papal States", "Ecclesiastical jurisdiction", "Pontifical Commission"], "Women": ["Female citizens", "Laywomen", "Women residents", "Female population", "Non-clergy women"], "Voting": ["Electoral rights", "Suffrage", "Ballot casting", "Electoral participation", "Voting eligibility"]}, "ASSOCIATED": ["Vatican City statutes", "Pontifical Commission elections", "Male citizenship requirement", "Canon law provisions", "Electoral body composition", "Ecclesiastical state governance", "Historical papal tradition", "Clerical voting rights", "Church governance structure", "Lay citizen eligibility"], "VERBS": ["restrict", "grant", "permit", "authorize", "participate"]}
+{"qid": "2024-44329", "raw": ""}
+{"qid": "2024-223358", "raw": ""}
+{"qid": "2024-217827", "KEY_ENTITIES": {"serial_killers": ["multiple homicide offenders", "serial murder perpetrators", "habitual murderers", "repeat violent criminals", "multiple victim killers"], "death_penalty": ["lethal injection", "state execution", "judicial execution", "capital punishment", "death row inmates"], "execution_timing": ["post conviction delays", "appeal process duration", "clemency review period", "execution scheduling", "death row timeline"]}, "ASSOCIATED": ["habeas corpus petitions", "counsel ineffectiveness claims", "clemency board decisions", "post conviction relief", "death penalty moratorium", "jurisdictional execution rates", "prosecutorial discretion", "case complexity factors", "evidence admissibility hearings", "capital punishment politics"], "VERBS": ["administered", "carried out", "scheduled", "expedited", "delayed"]}
+{"qid": "2024-146893", "raw": ""}
+{"qid": "2024-18963", "raw": ""}
+{"qid": "2024-79113", "raw": ""}
+{"qid": "2024-25195", "raw": ""}
+{"qid": "2024-36935", "raw": ""}
+{"qid": "2024-94706", "raw": ""}
+{"qid": "2024-36155", "raw": ""}
+{"qid": "2024-216592", "raw": ""}
+{"qid": "2024-133137", "raw": ""}
+{"qid": "2024-73340", "raw": ""}
+{"qid": "2024-158261", "raw": ""}
+{"qid": "2024-24226", "raw": ""}
+{"qid": "2024-44544", "raw": ""}
+{"qid": "2024-216231", "raw": ""}
+{"qid": "2024-173513", "raw": ""}
+{"qid": "2024-28144", "raw": ""}
+{"qid": "2024-146077", "raw": ""}
+{"qid": "2024-223094", "raw": ""}
+{"qid": "2024-224701", "raw": ""}
+{"qid": "2024-214333", "raw": ""}
+{"qid": "2024-66915", "raw": ""}
+{"qid": "2024-121840", "raw": ""}
+{"qid": "2024-34583", "raw": ""}
+{"qid": "2024-149459", "raw": ""}
+{"qid": "2024-26688", "raw": ""}
+{"qid": "2024-38428", "raw": ""}
+{"qid": "2024-22886", "KEY_ENTITIES": {"Illegal_Immigrants": ["undocumented immigrants", "unauthorized residents", "undocumented aliens", "noncitizens without status", "undocumented population"], "Free_Healthcare": ["no-cost medical care", "publicly funded health services", "government health coverage", "Medicaid eligibility", "emergency medical assistance"]}, "ASSOCIATED": ["public charge rule", "emergency Medicaid", "EMTALA requirements", "federally qualified health centers", "immigration status verification", "state funded programs", "public benefits restrictions", "community health centers", "sliding scale fees", "nonemergency medical care"], "VERBS": ["qualify", "access", "receive", "obtain", "enroll"]}
+{"qid": "2024-147273", "raw": ""}
+{"qid": "2024-24022", "KEY_ENTITIES": {"Social Media Trends": ["viral challenges", "internet phenomena", "social media fads", "algorithmic content", "trending hashtags"], "TikTok Platform": ["short-form video apps", "Douyin application", "mobile video sharing", "algorithmic feeds", "Gen Z social networks"], "Digital Addiction": ["compulsive scrolling", "behavioral dependency", "screen time disorder", "dopamine feedback loops", "digital habit formation"]}, "ASSOCIATED": ["variable reward schedules", "algorithmic recommendation systems", "dopamine driven scrolling", "platform engagement design", "content consumption patterns", "youth mental health impact", "FOMO driven behavior", "psychological manipulation tactics", "attention economy metrics", "digital wellbeing research"], "VERBS": ["drive", "influence", "trigger", "correlate", "reinforce"]}
+{"qid": "2024-41576", "raw": ""}
+{"qid": "2024-33359", "KEY_ENTITIES": {"working_capital": ["net working capital", "cash conversion cycle", "current asset management", "operating liquidity", "short term solvency"], "business_health": ["corporate solvency", "financial stability", "business viability", "economic resilience", "operational robustness"], "corporate_management": ["balance sheet optimization", "treasury operations", "liquidity planning", "capital allocation", "financial stewardship"]}, "ASSOCIATED": ["days sales outstanding", "inventory turnover ratio", "accounts payable optimization", "quick ratio analysis", "liquidity coverage ratio", "operating cash flow", "current ratio analysis", "capital efficiency metrics", "financial distress signals", "treasury cash management"], "VERBS": ["optimize", "maintain", "sustain", "strengthen", "bolster"]}
+{"qid": "2024-147917", "raw": ""}

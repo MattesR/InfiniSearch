@@ -1,0 +1,378 @@
+"""
+Two-phase peek and grab v2.
+
+Phase 1: Standalone peek — grab cheap pieces (< threshold)
+Phase 2: Combo peek — build 2-way ANDs from remaining KEY pieces, peek counts,
+         sort by tightness, report totals.
+
+Usage:
+    from peek_grab_v2 import peek_and_grab_v2
+
+    result = peek_and_grab_v2(
+        qid="2024-32912",
+        expansions_path="./kiss.jsonl",
+        tokenizer=tokenizer,
+        engine=engine,
+    )
+"""
+
+import time
+from itertools import combinations
+from progressive_queries import build_pieces
+
+
+def peek_and_grab_v2(
+    qid,
+    expansions_path,
+    tokenizer,
+    engine,
+    max_standalone_key=1500,
+    max_standalone_assoc=750,
+    max_clause_freq=80000000,
+    prox_peek=10,
+    prox_cross=50,
+    max_budget=20000,
+    max_assoc_combo=50000,
+    budget_fill=True,
+    verbose=True,
+    _pieces=None,
+):
+    """
+    Two-phase peek and grab.
+
+    Phase 1: Standalone — peek all pieces, grab cheap ones.
+    Phase 2: Combo — build 2-way ANDs from remaining KEY pieces (no assoc),
+             peek counts, sort by count.
+    Phase 3: If over budget, tighten broadest queries with associated terms.
+
+    Returns dict with grabbed, combo queries, remaining assoc, and summaries.
+    """
+    t0 = time.perf_counter()
+
+    if _pieces is not None:
+        pieces = _pieces
+    else:
+        pieces = build_pieces(qid, expansions_path, tokenizer, engine, verbose=False)
+
+    # ================================================================
+    # Phase 1: Standalone peek and grab
+    # ================================================================
+    all_key_pieces = {}  # description -> {piece, count, aspect, grabbed}
+    all_assoc_pieces = {}  # description -> {piece, count, grabbed}
+    grabbed = []
+
+    if verbose:
+        print(f"\n{'='*70}")
+        print(f"Phase 1: Standalone peek ({qid})")
+        print(f"{'='*70}")
+
+    # Peek key pieces
+    for aspect_name, piece_list in pieces["key_pieces"].items():
+        for p in piece_list:
+            prox = prox_peek if len(p["cnf"]) > 1 else None
+            try:
+                kwargs = {"max_clause_freq": max_clause_freq}
+                if prox:
+                    kwargs["max_diff_tokens"] = prox
+                cnt = engine.count_cnf(p["cnf"], **kwargs).get("count", 0)
+            except Exception:
+                cnt = 0
+
+            desc = p["description"]
+            info = {
+                "piece": p,
+                "count": cnt,
+                "aspect": aspect_name,
+                "grabbed": cnt <= max_standalone_key and cnt > 0,
+            }
+            all_key_pieces[desc] = info
+
+            if info["grabbed"]:
+                grabbed.append({
+                    "type": "cnf",
+                    "cnf": p["cnf"],
+                    "max_diff_tokens": prox,
+                    "description": desc,
+                    "estimated_count": cnt,
+                    "level": "S0_key",
+                })
+
+            if verbose:
+                status = "GRAB" if info["grabbed"] else ("skip" if cnt == 0 else "remain")
+                print(f"  [{aspect_name}] {desc}: {cnt:>10,d}  {status}")
+
+    # Peek assoc pieces
+    for p in pieces["associated"]:
+        prox = prox_peek if len(p["cnf"]) > 1 else None
+        try:
+            kwargs = {"max_clause_freq": max_clause_freq}
+            if prox:
+                kwargs["max_diff_tokens"] = prox
+            cnt = engine.count_cnf(p["cnf"], **kwargs).get("count", 0)
+        except Exception:
+            cnt = 0
+
+        desc = p["description"]
+        info = {
+            "piece": p,
+            "count": cnt,
+            "grabbed": cnt <= max_standalone_assoc and cnt > 0,
+        }
+        all_assoc_pieces[desc] = info
+
+        if info["grabbed"]:
+            grabbed.append({
+                "type": "cnf",
+                "cnf": p["cnf"],
+                "max_diff_tokens": prox,
+                "description": desc,
+                "estimated_count": cnt,
+                "level": "S0_assoc",
+            })
+
+        if verbose:
+            status = "GRAB" if info["grabbed"] else ("skip" if cnt == 0 else "remain")
+            print(f"  [assoc] {desc}: {cnt:>10,d}  {status}")
+
+    grabbed_total = sum(q["estimated_count"] for q in grabbed)
+    remaining_key = {d: i for d, i in all_key_pieces.items() if not i["grabbed"] and i["count"] > 0}
+    remaining_assoc = {d: i for d, i in all_assoc_pieces.items() if not i["grabbed"] and i["count"] > 0}
+
+    print(f"  [{qid}] Phase 1: {len(grabbed)} standalone grabbed (~{grabbed_total:,d} docs), "
+          f"{len(remaining_key)} key + {len(remaining_assoc)} assoc remaining")
+
+    # ================================================================
+    # Phase 2: Combo peek (2-way ANDs from remaining pieces)
+    #   - key × key (cross-aspect)
+    #   - key × assoc
+    # ================================================================
+    if verbose:
+        print(f"\n{'='*70}")
+        print(f"Phase 2: Combo peek — 2-way ANDs from remaining pieces")
+        print(f"{'='*70}")
+
+    # Group remaining key pieces by aspect
+    remaining_by_aspect = {}
+    for desc, info in remaining_key.items():
+        aspect = info["aspect"]
+        remaining_by_aspect.setdefault(aspect, []).append(info)
+
+    aspect_names = list(remaining_by_aspect.keys())
+    combo_queries = []
+    n_combo_checked = 0
+
+    # Key × key (cross-aspect)
+    if len(aspect_names) >= 2:
+        for a, b in combinations(aspect_names, 2):
+            for p_a in remaining_by_aspect[a]:
+                for p_b in remaining_by_aspect[b]:
+                    cnf = p_a["piece"]["cnf"] + p_b["piece"]["cnf"]
+                    desc = f"({p_a['piece']['description']}) AND ({p_b['piece']['description']})"
+
+                    try:
+                        cnt = engine.count_cnf(
+                            cnf, max_clause_freq=max_clause_freq,
+                            max_diff_tokens=prox_cross,
+                        ).get("count", 0)
+                    except Exception:
+                        cnt = 0
+
+                    n_combo_checked += 1
+
+                    if cnt == 0:
+                        continue
+
+                    combo_queries.append({
+                        "type": "cnf",
+                        "cnf": cnf,
+                        "max_diff_tokens": prox_cross,
+                        "description": desc,
+                        "estimated_count": cnt,
+                        "level": "S_combo_kk",
+                    })
+
+                    if verbose:
+                        print(f"  [k×k] {desc}: {cnt:>10,d}")
+
+    # Key × assoc (only pieces from the FIRST aspect × remaining assoc below threshold)
+    if aspect_names:
+        first_aspect = aspect_names[0]
+        first_aspect_pieces = remaining_by_aspect[first_aspect]
+
+        for info_k in first_aspect_pieces:
+            for desc_a, info_a in remaining_assoc.items():
+                # Skip broad assoc terms
+                if info_a["count"] > max_assoc_combo:
+                    continue
+
+                cnf = info_k["piece"]["cnf"] + info_a["piece"]["cnf"]
+                desc = f"({info_k['piece']['description']}) AND ({info_a['piece']['description']})"
+
+                try:
+                    cnt = engine.count_cnf(
+                        cnf, max_clause_freq=max_clause_freq,
+                        max_diff_tokens=prox_cross,
+                    ).get("count", 0)
+                except Exception:
+                    cnt = 0
+
+                n_combo_checked += 1
+
+                if cnt == 0:
+                    continue
+
+                # Skip if combo is too broad (treat like standalone threshold)
+                if cnt > max_standalone_key:
+                    continue
+
+                combo_queries.append({
+                    "type": "cnf",
+                    "cnf": cnf,
+                    "max_diff_tokens": prox_cross,
+                    "description": desc,
+                    "estimated_count": cnt,
+                    "level": "S_combo_ka",
+                    "assoc_used": desc_a,
+                })
+
+                if verbose:
+                    print(f"  [k×a] {desc}: {cnt:>10,d}")
+
+    # Sort: k×k first (by count asc), then k×a (by count asc)
+    combo_kk = sorted([q for q in combo_queries if q["level"] == "S_combo_kk"],
+                       key=lambda q: q["estimated_count"])
+    combo_ka = sorted([q for q in combo_queries if q["level"] == "S_combo_ka"],
+                       key=lambda q: q["estimated_count"])
+    combo_queries = combo_kk + combo_ka
+
+    combo_total = sum(q["estimated_count"] for q in combo_queries)
+    remaining_assoc_total = sum(i["count"] for i in remaining_assoc.values())
+
+    print(f"  [{qid}] Phase 2: {n_combo_checked} combos checked, "
+          f"{len(combo_kk)} k×k + {len(combo_ka)} k×a with hits (~{combo_total:,d} docs). "
+          f"Total so far: ~{grabbed_total + combo_total:,d} / {max_budget:,d} budget")
+
+    # ================================================================
+    # Phase 3: Budget cut — only keep combos that fit
+    # ================================================================
+    budget = max_budget
+    budget_remaining = budget - grabbed_total
+    tightened = []  # kept for compatibility
+
+    if combo_total > budget_remaining:
+        kept_combos = []
+        running = 0
+        skipped_combos = 0
+        cheap_ka_threshold = max_standalone_assoc / 2
+
+        for q in combo_queries:
+            # Always add cheap k×a combos (let budget overflow)
+            if q["level"] == "S_combo_ka" and q["estimated_count"] <= cheap_ka_threshold:
+                kept_combos.append(q)
+                running += q["estimated_count"]
+            elif running + q["estimated_count"] <= budget_remaining:
+                kept_combos.append(q)
+                running += q["estimated_count"]
+            else:
+                skipped_combos += 1
+
+        print(f"  [{qid}] Phase 3: budget cut — kept {len(kept_combos)} combos (~{running:,d} docs), "
+              f"skipped {skipped_combos}. Total: ~{grabbed_total + running:,d} / {budget:,d}")
+        combo_queries = kept_combos
+        combo_total = running
+    else:
+        print(f"  [{qid}] Phase 3: all combos fit (~{grabbed_total + combo_total:,d} / {budget:,d})")
+
+    all_fire_queries = list(grabbed) + list(combo_queries)
+    current_total = grabbed_total + combo_total
+
+    # Split back into grabbed and combos for clarity
+    grabbed = [q for q in all_fire_queries if q["level"].startswith("S0")]
+    combo_queries = [q for q in all_fire_queries if not q["level"].startswith("S0")]
+
+    # Sort combos by count (tightest first)
+    combo_queries.sort(key=lambda q: q["estimated_count"])
+    grabbed_total = sum(q["estimated_count"] for q in grabbed)
+    combo_total = sum(q["estimated_count"] for q in combo_queries)
+    current_total = grabbed_total + combo_total
+
+    # ================================================================
+    # Phase 4: Fill remaining budget with cheapest remaining pieces
+    # ================================================================
+    filled = []
+    if budget_fill and current_total < budget:
+        # Collect all remaining pieces (key + assoc) not yet in queries
+        fired_descs = {q["description"] for q in grabbed + combo_queries}
+        remaining_all = []
+
+        for desc, info in remaining_key.items():
+            if desc not in fired_descs:
+                remaining_all.append(info)
+        for desc, info in remaining_assoc.items():
+            if desc not in fired_descs:
+                remaining_all.append(info)
+
+        # Sort by count ascending (cheapest first)
+        remaining_all.sort(key=lambda x: x["count"])
+
+        for info in remaining_all:
+            if current_total + info["count"] > budget:
+                continue
+            p = info["piece"]
+            prox = prox_peek if len(p["cnf"]) > 1 else None
+            q = {
+                "type": "cnf",
+                "cnf": p["cnf"],
+                "max_diff_tokens": prox,
+                "description": p["description"],
+                "estimated_count": info["count"],
+                "level": "S_fill",
+            }
+            grabbed.append(q)
+            all_fire_queries.append(q)
+            current_total += info["count"]
+            filled.append({"description": p["description"], "count": info["count"]})
+
+            if verbose:
+                print(f"  Fill: {p['description']}: {info['count']:>10,d}  (total: {current_total:,d})")
+
+        grabbed_total = sum(q["estimated_count"] for q in grabbed)
+
+        print(f"  [{qid}] Phase 4: filled {len(filled)} standalone pieces (~{sum(f['count'] for f in filled):,d} docs). "
+              f"Final total: ~{current_total:,d} / {budget:,d} budget")
+    else:
+        print(f"  [{qid}] Phase 4: skipped (at budget: ~{current_total:,d} / {budget:,d})")
+
+    elapsed = time.perf_counter() - t0
+
+    if verbose:
+        print(f"\n{'='*70}")
+        print(f"Summary ({elapsed:.1f}s)")
+        print(f"{'='*70}")
+        print(f"  Phase 1 grabbed:       {len(grabbed):>5d} queries, ~{grabbed_total:>12,d} docs")
+        print(f"  Phase 2 combos:        {len(combo_queries):>5d} queries, ~{combo_total:>12,d} docs")
+        if tightened:
+            n_tight = sum(t["replacements"] for t in tightened)
+            print(f"    (incl. {n_tight} tightened from {len(tightened)} broad combos)")
+        print(f"  Remaining assoc:       {len(remaining_assoc):>5d} pieces,  ~{remaining_assoc_total:>12,d} docs")
+        print(f"  Total (grab+combo):    ~{grabbed_total + combo_total:>12,d} docs")
+        print(f"  Budget:                 {budget:>12,d}")
+        print(f"  Total (all):           ~{grabbed_total + combo_total + remaining_assoc_total:>12,d} docs")
+        print(f"{'='*70}")
+
+    return {
+        "qid": qid,
+        "grabbed": grabbed,
+        "combo_queries": combo_queries,
+        "tightened": tightened,
+        "filled": filled,
+        "remaining_key": remaining_key,
+        "remaining_assoc": remaining_assoc,
+        "all_key_pieces": all_key_pieces,
+        "all_assoc_pieces": all_assoc_pieces,
+        "grabbed_total": grabbed_total,
+        "combo_total": combo_total,
+        "remaining_assoc_total": remaining_assoc_total,
+        "max_budget": max_budget,
+        "time": elapsed,
+    }
